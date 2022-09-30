@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <!-- Font Awesome link here  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- Main style sheet link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header html   -->
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img class="logo_img" src="./img/Logo.png" alt="Logo">
+                <div class="menu_bar">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_search_part">
+                <div class="search_element">
+                    <input class="search_input" type="text" name="search" id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart_quantity">10</span>
+                </div>
+                <div class="log_in_btn_top">
+                    <button class="header_login_btn">Login</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Log In form Content  -->
+    <main>
+        <section id="main_body">
+            <div class="container">
+                <div class="form_content">
+                    <div class="form_img">
+                        <img src="./img/Contact.png" alt="img">
+                    </div>
+                    <div class="login_form">
+                        <div class="form_title">
+                            <h1>Create Account</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed </p>
+                        </div>
+                        <div class="form_body">
+                            <form action="">
+                                <input type="text" placeholder="Your name">
+                                <input type="email" placeholder="Your name">
+                                <input type="password" placeholder="Email address">
+                                <input type="password" placeholder="Confirme password">
+                            </form>
+                        </div>
+                        <div class="form_bottom">
+                            <button>Register</button>
+                            <p>Already have an account? <a href="#">click here.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- footer section start -->
+<footer>
+    <div class="container">
+        <div class="footer_parent">
+            <div class="footer_item item1">
+                <img src="./img/Logo.png" alt="bootm-logo">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices tincidunt nunc, consectetur sed elit.</p>
+                <div class="social_icon">
+                    <a href="https://www.facebook.com/AminBD.Miah" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/alaminsf40" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/alaminsf40/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer_item">
+                <h3 class="footer_item_tittle">About</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">News & Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer_item">
+                <h3 class="footer_item_tittle">Company</h3>
+                <ul>
+                    <li><a href="#">How We Work</a></li>
+                    <li><a href="#">Capital</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
+            <div class="footer_item">
+                <h3 class="footer_item_tittle">Help</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Need help?</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Term & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copy_rights">&copy; Copyright.All right reserved.</p>
+    </div>
+</footer>
+
+ <!-- footer section end -->
+
+ <!-- All popUp start here  -->
+ <div class="pop_up">
+    <div class="pop_up_body">
+        <span id="popUp_hidden"><i class="fa-solid fa-xmark"></i></span>
+        <h3>Login</h3>
+        <form action="">
+            <input type="text" placeholder="Your Email">
+            <input type="password" placeholder="Your Password">
+            <input type="submit" value="Login" id="popUp_btn">
+        </form>
+    </div>
+ </div>
+ <!-- All popUp end here  -->
+
+    <!-- main js  -->
+    <script src="./main.js"></script>
+</body>
+</html>

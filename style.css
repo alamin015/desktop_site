@@ -1,0 +1,453 @@
+/* ---------------Google Font Link
+------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@600;700&display=swap');
+
+/* -----------------CSS VARIABLE START HERE 
+------------------------------------ */
+
+:root{
+    --btn_bg : #FF7D43;
+    --hover_btn_bg : #ee550e;
+    --hover_text : #000;
+    --box-shadow : 3px 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* -----------------CSS VARIABLE END HERE 
+------------------------------------ */
+
+
+
+
+
+/* --------Common Css Start Here 
+---------------------------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+h1,h2,h3,h4{
+    font-family: 'Poppins', sans-serif;
+}
+
+input:focus{
+    outline: none;
+    /* border: none; */
+}
+input::placeholder{
+    font-weight: 400;
+    font-size: 14px;
+}
+button{
+    outline: none;
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+img{
+    width: 100%;
+}
+/* ----------Common Css End Here
+----------------------------  */
+
+
+
+/* POP UP CSS START HERE  */
+.pop_up{
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding: 30px;
+    width: 500px;
+    height: 300px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition:  all 0.3s ease-in-out;
+}
+.pop_up.active{
+    opacity: 1;
+    visibility: visible;
+    top: 50%;
+}
+.pop_up_body{
+    position: relative;
+    width: 100%;
+    
+}
+.pop_up_body span{
+    position: absolute;
+    right: -37px;
+    top: -38px;
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+.pop_up_body h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.pop_up_body form{
+    width: 100%;
+}
+.pop_up_body form input{
+    display: block;
+    width: 100%;
+    padding: 14px 5px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(192, 191, 191);
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+#popUp_btn{
+    background: var(--btn_bg);
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#popUp_btn:hover {
+    background: var(--hover_btn_bg);
+}
+/* POP UP CSS END HERE  */
+
+
+/* ----------------Header css start here
+--------------------------------------  */
+header{
+    background: #fff;
+    width: 100%;
+    padding: 10px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11111;
+
+
+}
+header.active{
+    box-shadow: 3px 3px 14px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 57px;
+    height: 71.48px;
+}
+.logo .menu_bar ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: 143px;
+}
+.logo .menu_bar ul li {
+    margin-right: 33px;
+}
+.logo .menu_bar ul li a{
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    color:  rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease-in-out;
+}
+.logo .menu_bar ul li a:hover{
+    color: var(--hover_text);
+}
+
+
+.header_search_part{
+    display: flex;
+    align-items: center;
+}
+.header_search_part .search_element{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 35px;
+    /* padding: 0px ; */
+    height: 36px;
+    line-height: 36px;
+    min-width: 230px;
+    box-sizing: border-box;
+    
+}
+.header_search_part .search_element .search_input{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    opacity: 1;
+    border: none;
+    background: transparent;
+    padding: 0px 25px 0px 3px;
+    outline: none;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    /* box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.2); */
+    border: 1px solid rgb(204, 201, 201);
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+ .header_search_part .search_element .search_input.active{
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.header_search_part .search_element .fa-solid{
+    position: absolute;
+    right: 0px;
+    top: 60%;
+    transform: translateY(-50%);
+    opacity: 2;
+    width: 22px;
+    height: 22px;
+}
+.header_search_part .search_element .fa-solid:hover{
+    cursor: pointer;
+}
+
+header .cart{
+    position: relative;
+    margin-right: 35px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+
+}
+header .cart:hover{
+    cursor: pointer;
+}
+.cart .fa-solid{
+    color: #292D32;
+    height: 24px;
+    width: 24px;
+}
+.cart span{
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: var(--btn_bg);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+}
+.log_in_btn_top button{
+    width: 82px;
+    height: 33px;
+    background: var(--btn_bg);
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.log_in_btn_top button:hover{
+    background: var(--hover_btn_bg);
+}
+/* ----------------Header css End here
+--------------------------------------  */
+
+
+/* LOG IN FORM CSS SATRT HERE  */
+#main_body{
+    margin-top: 91px;
+    padding: 60px 0px;
+}
+.form_content{
+    display: flex;
+    align-items: center;
+}
+.form_content .form_img{
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.form_content .form_img img{
+    max-width: 423px;
+    max-height: 462px;
+    width: 100%;
+}
+
+.form_content .login_form{
+    text-align: left;
+    flex-grow: 1;
+}
+
+.form_content .login_form .form_title h1{
+    color: #000;
+    font-weight: 700;
+    font-size: 62px;
+    margin-bottom: 10px;
+}
+.form_content .login_form .form_title p{
+    color:rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.form_content .form_body{
+    margin-top: 50px;
+}
+.form_content .form_body form{
+    
+}
+.form_content .form_body form input{
+    display: block;
+    width: 550px;
+    height: 56px;
+    margin-bottom: 24px;
+    outline: none;
+    border: 1px solid rgb(148, 146, 146);
+    border-radius: 3px;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+
+    
+}
+
+.form_bottom{
+    text-align: center;
+    margin-top: 6px;
+    width: 550px;
+    
+}
+.form_bottom button{
+    width: 176px;
+    height: 54px;
+    background: var(--btn_bg);
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+
+}
+.form_bottom button:hover{
+    background: var(--hover_btn_bg);
+    cursor: pointer;
+}
+.form_bottom p{
+    color:rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    font-size: 20px;
+
+}
+.form_bottom p a{
+    color: var(--btn_bg);
+}
+/* LOG IN FORM CSS END HERE  */
+
+
+/* Footer section css  */
+footer{
+    background: #fafafa;
+    padding: 60px 0px 10px 0;
+}
+footer .footer_parent{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 5px;
+}
+.footer_parent .item1 img{
+    width: 56px;
+    height: 70px;
+}
+
+.footer_parent .item1 p{
+    font-weight: 400;
+    font-size: 14px;
+    color:rgba(0, 0, 0, 0.7);
+    margin: 12px 0px 20px 0px;
+}
+.footer_parent .item1 a{
+    margin-right: 15px;
+}
+.footer_parent .item1 .fa-brands{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #7C7C7C;;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.footer_parent .item1 .fa-brands:hover {
+    transform: rotate(360deg);
+    background: #000;
+}
+
+.footer_item .footer_item_tittle{
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.footer_item  ul li a{
+    color:rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.footer_item  ul li a:hover{
+    color: #000;
+}
+footer .container .copy_rights{
+    font-weight: 400;
+    font-size: 14px;
+    color:rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
